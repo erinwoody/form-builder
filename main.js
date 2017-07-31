@@ -23,12 +23,33 @@ function buildForm() {
       let input = document.createElement("input");
       input.type = formData[i].type;
       input.placeholder = formData[i].label;
+      input.icon = formData[i].icon;
       fields.appendChild(input)
     }
     else if (formData[i].type === "email") {
       let input = document.createElement("input");
+      input.type = formData[i].type;
+      input.placeholder = formData[i].label;
+      fields.appendChild(input)
     }
-
+    else if (formData[i].type === "select") {
+      let input = document.createElement("input");
+      input.type = formData[i].type;
+      input.placeholder = formData[i].label;
+      fields.appendChild(input)
+    }
+    else if (formData[i].type === "textarea") {
+      let input = document.createElement("input");
+      input.type = formData[i].type;
+      input.placeholder = formData[i].label;
+      fields.appendChild(input)
+    }
+    else if (formData[i].type === "tel") {
+      let input = document.createElement("input");
+      input.type = formData[i].type;
+      input.placeholder = formData[i].label;
+      fields.appendChild(input)
+    }
   }
 }
 
