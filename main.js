@@ -32,12 +32,31 @@ function buildForm() {
       input.placeholder = formData[i].label;
       fields.appendChild(input)
     }
+
+
     else if (formData[i].type === "select") {
-      let input = document.createElement("input");
-      input.type = formData[i].type;
+      let input = document.createElement("select");
       input.placeholder = formData[i].label;
       fields.appendChild(input)
+
+      let defaultOption = document.createElement("option");
+      defaultOption.textContent = formData[i].label;
+      input.appendChild(defaultOption);
+
+      let options = formData[i].options;
+      for (let j = 0; j < options.length; j++) {
+        let newOption = document.createElement("option");
+        newOption.textContent = options[j].label;
+        newOption.value = options.value;
+        input.appendChild(newOption);
+      }
     }
+    // create initial option using the label && append options to select
+    //loop through options 
+    // create new option
+    // append new option to select
+
+
     else if (formData[i].type === "textarea") {
       let input = document.createElement("input");
       input.type = formData[i].type;
@@ -54,6 +73,5 @@ function buildForm() {
 }
 
 
-
-
 buildForm()
+
