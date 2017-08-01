@@ -58,7 +58,7 @@ function buildForm() {
 
 
     else if (formData[i].type === "textarea") {
-      let input = document.createElement("input");
+      let input = document.createElement("textarea");
       input.type = formData[i].type;
       input.placeholder = formData[i].label;
       fields.appendChild(input)
